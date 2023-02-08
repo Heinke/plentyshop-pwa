@@ -100,6 +100,7 @@
       @close="closeSearch"
     />
     <SfOverlay :visible="isSearchOpen" />
+    <CookieControl :locale="locale"/>
   </div>
 </template>
 
@@ -201,8 +202,8 @@ export default {
 
     const { app } = useContext();
     app.i18n.locale === 'de' ? localize('de', de) : localize('en', en);
-
     return {
+      locale: app.i18n.locale,
       accountIcon,
       cartTotalItems,
       handleAccountClick,

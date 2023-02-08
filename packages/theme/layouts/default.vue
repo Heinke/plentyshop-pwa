@@ -8,7 +8,6 @@
 
     <div id="layout">
       <nuxt :key="route.fullPath" />
-      <CookieControl locale="en"/>
       <BottomNavigation />
       <CartSidebar />
       <WishlistSidebar />
