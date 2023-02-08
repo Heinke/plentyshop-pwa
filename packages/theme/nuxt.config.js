@@ -39,9 +39,9 @@ const config = {
   loading: {color: '#fff'},
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [
-    '~/plugins/api-cookies'
-  ],
+  // plugins: [
+  //   '~/plugins/api-cookies'
+  // ],
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
@@ -85,35 +85,8 @@ const config = {
     ['nuxt-i18n', {
       baseUrl: process.env.BASE_URL || `http://localhost:${appPort}`
     }],
-    'cookie-universal-nuxt',
-    [
-      "nuxt-cookie-control",
-      {
-        barPosition: "bottom-right",
-        blockIframe: true,
-        colors: {
-          barTextColor: "#fff",
-          barBackground: "#12957b",
-          barButtonColor: "#fff",
-          barButtonBackground: "#206569",
-          barButtonHoverColor: "#fff",
-          barButtonHoverBackground: "#2e495e",
-          modalButtonBackground: "#206569",
-          modalButtonHoverColor: "#fff",
-          controlButtonBackground: "#12957b",
-          controlButtonHoverBackground: "#2e495e",
-          controlButtonIconHoverColor: "#fff",
-          controlButtonIconColor: "#fff",
-          modalButtonHoverBackground: "#2e495e",
-          checkboxActiveBackground: "#2e495e",
-          checkboxInactiveBackground: "#ede1e1",
-          checkboxActiveCircleBackground: "#00c58e",
-          checkboxInactiveCircleBackground: "#f44336",
-          checkboxDisabledBackground: "#ddd",
-          checkboxDisabledCircleBackground: "#fff"
-        }
-      }
-    ],
+    ['cookie-universal-nuxt', { alias: 'cookiz' }],
+    'nuxt-cookie-control',
     'vue-scrollto/nuxt',
     '@vue-storefront/middleware/nuxt'
   ],
